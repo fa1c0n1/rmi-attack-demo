@@ -1,12 +1,8 @@
 package me.mole.remoteclass;
 
-import javax.naming.Context;
-import javax.naming.Name;
-import javax.naming.spi.ObjectFactory;
 import java.io.*;
-import java.util.Hashtable;
 
-public class ExportObject implements ObjectFactory, Serializable {
+public class ExportObject implements Serializable {
     private static final long serialVersionUID = 4314897425113751792L;
 
     static {
@@ -31,10 +27,5 @@ public class ExportObject implements ObjectFactory, Serializable {
         br.close();
         bis.close();
 //        throw new Exception(sb);
-    }
-
-    @Override
-    public Object getObjectInstance(Object obj, Name name, Context nameCtx, Hashtable<?, ?> environment) throws Exception {
-        return null;
     }
 }
